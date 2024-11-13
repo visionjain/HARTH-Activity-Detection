@@ -85,6 +85,11 @@ The KNN model works by comparing the input feature vector with the stored labele
 
 ![image](https://github.com/user-attachments/assets/b65a33a5-edd4-415c-9167-1c27be0ce985)
 
+---
+
+## Contributing
+
+Contributions are welcome! Feel free to fork the repository and submit pull requests for any improvements or bug fixes. If you find any issues or have suggestions for new features, please create an issue in the repository.
 
 ---
 
