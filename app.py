@@ -13,7 +13,7 @@ hide_streamlit_style = """
 """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 # Load the pre-trained KNN model
-model_filename = 'C:/Users/visio_nt/Desktop/harth/knn_harth_model.joblib'
+model_filename = '/mount/src/harth-activity-detection/knn_harth_model.joblib'
 knn_model = joblib.load(model_filename)
 
 # Map activity codes to activity names as per HARTH dataset
