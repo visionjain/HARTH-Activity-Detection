@@ -79,6 +79,14 @@ The KNN model works by comparing the input feature vector with the stored labele
 - **140.0**: Cycling (stand, inactive)
 
 ---
+## Demo
+
+![image](https://github.com/user-attachments/assets/9be8690f-e2fe-4aef-92cf-5d4e8fc4e017)
+
+![image](https://github.com/user-attachments/assets/b65a33a5-edd4-415c-9167-1c27be0ce985)
+
+
+---
 
 ## License
 
