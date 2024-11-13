@@ -1,5 +1,5 @@
 
-# Activity Prediction Using KNN
+# Activity Detection Using KNN
 
 This project aims to predict physical activities based on sensor data using a K-Nearest Neighbors (KNN) model. The sensor data consists of 3-axis accelerometer readings from wearable devices such as sensors placed on the thigh and back. These readings are used to predict various physical activities like walking, running, sitting, or standing.
 
