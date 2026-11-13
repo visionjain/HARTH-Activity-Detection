@@ -3,6 +3,7 @@ import joblib
 import numpy as np
 import pandas as pd
 import time
+from pathlib import Path
 
 
 
@@ -13,7 +14,7 @@ hide_streamlit_style = """
 """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 # Load the pre-trained KNN model
-model_filename = '/mount/src/harth-activity-detection/knn_harth_model.joblib'
+model_filename = Path(__file__).parent / 'knn_harth_model.joblib'
 knn_model = joblib.load(model_filename)
 
 # Map activity codes to activity names as per HARTH dataset
@@ -53,6 +54,18 @@ st.title("HARTH Activity Detection App")
 
 # Sidebar for mode selection
 mode = st.sidebar.selectbox("Select Mode", ["Manual Data Entry", "Live Data Mode"])
+
+# Sample CSV download in sidebar
+st.sidebar.markdown("---")
+st.sidebar.markdown("**Test the Live Data Mode**")
+sample_csv_path = Path(__file__).parent / 'live.csv'
+with open(sample_csv_path, "rb") as f:
+    st.sidebar.download_button(
+        label="Download Sample CSV",
+        data=f,
+        file_name="harth_sample.csv",
+        mime="text/csv",
+    )
 
 if mode == "Manual Data Entry":
     # Create a 3x2 grid of input fields for manual data entry
