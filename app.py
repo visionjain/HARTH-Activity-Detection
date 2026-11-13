@@ -51,13 +51,23 @@ gif_links = {
 
 # Set up Streamlit app title and description
 st.title("HARTH Activity Detection App")
+st.markdown(
+    "A KNN-based human activity recognition system using 6-axis accelerometer data "
+    "from wearable sensors placed on the back and thigh. "
+    "Classifies 12 physical activities in real-time for IoT health monitoring applications."
+)
+st.info(
+    "👉 **To test the app:** Download the sample CSV from the sidebar, "
+    "then upload it in **Live Data Mode** to see real-time activity predictions."
+)
 
 # Sidebar for mode selection
-mode = st.sidebar.selectbox("Select Mode", ["Manual Data Entry", "Live Data Mode"])
+mode = st.sidebar.selectbox("Select Mode", ["Live Data Mode", "Manual Data Entry"])
 
 # Sample CSV download in sidebar
 st.sidebar.markdown("---")
 st.sidebar.markdown("**Test the Live Data Mode**")
+st.sidebar.markdown("Download the sample CSV and upload it in Live Data Mode to test the app.")
 sample_csv_path = Path(__file__).parent / 'live.csv'
 with open(sample_csv_path, "rb") as f:
     st.sidebar.download_button(
